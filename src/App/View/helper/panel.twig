@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+    {% if title is not empty %}
+    <div class="panel-heading">
+        <h3 class="panel-title">{{title}}</h3>
+    </div>
+    {% endif %}
+    {%if content is not empty %}
+    <div class="panel-body">
+        {{content|raw}}
+    </div>
+    {% endif %}
+    {% if footer is not empty %}
+    <div class="panel-footer">
+        {{footer}}
+    </div>
+    {% endif %}
+</div>

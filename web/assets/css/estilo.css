@@ -1,0 +1,697 @@
+/*
+--------------------------------------------------------------------------------
+Formatação de elementos básicos
+--------------------------------------------------------------------------------
+*/
+
+body{
+    background-color: #f6f3f3;
+    
+}
+
+h2{
+    text-align: center;
+
+}
+
+select{
+    width: 100%;
+    height: 100%;
+}
+
+input[type = "name"] {
+    border: none;
+
+}
+
+button{
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+input[type="file"] {
+    max-width: 100%;
+}
+
+/*
+    Locais para considerar os espaços e quebras de linha em páginas
+    Necessário para manter formatação na apresetação de enunciados e
+    desrições por exemplo.
+*/
+.tab-listar, .enunciado-questao, .alternativa, .descricao{
+   white-space:pre-wrap;
+}
+
+#editar, #visualizar, #excluir{
+    visibility: hidden;
+}
+
+button.visualizar{
+    background: none;
+    border: none;
+    color: black;
+
+}
+
+.visualizar:hover{
+    text-decoration: none;
+    color: #007;
+
+}
+
+.titulo-pagina{
+    color: #4e4741;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+.titulo-secao{
+    color: #05a3c0;
+}
+
+.linkcriacao{
+    color: #c27b5f;
+    text-decoration: none;
+    font-size: 200%;
+}
+
+.linkcriacao:hover{
+    color: #ec7023;
+    text-decoration: none;
+}
+
+.container-fluid{
+    min-height: 100%;
+}
+
+.etiqueta{
+    color: #ab5d50;
+}
+
+tr .etiqueta{
+    width: 30%;
+    text-align: right;
+    font-weight: bold;
+}
+
+.submenu{
+    border: solid #ddd 1px;
+    border-radius: 20px 20px;
+}
+
+
+ol .alternativa{
+    padding: 3px 3px;
+}
+.alternativa li{
+    list-style-type: lower-alpha;
+}
+
+
+/*
+   -----------------------------------------------------------------------------
+    Mensagens
+   -----------------------------------------------------------------------------
+*/
+.msg-erro-form
+{
+    color: red;
+    display: none;
+    text-align: center;
+}
+
+.msg-erro{
+    color: #d9534f;
+}
+
+.msg-criacao
+{
+    color: #009050;
+}
+
+.msglistagemvazia{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.msglistagemvazia a{
+    text-decoration: none;
+    color: #ab5d50;
+}
+
+.msglistagemvazia a:hover{
+    text-decoration: none;
+    color: #e55103;
+}
+
+.msg-info
+{
+    border-radius: 20px 20px;
+    border: solid #fff;
+    padding: 2px;
+}
+
+.beta-logo{
+    color: #ff7112;
+    font-size: 60%;
+}
+
+
+/*
+   -----------------------------------------------------------------------------
+   Personalização da barra de navegação
+   -----------------------------------------------------------------------------
+*/
+
+.navbar-custom
+{
+    //  background-color:#4b524f;
+    background-color: #5c758c;
+    color:#174274;
+    border-radius: 0px;
+}
+
+.navbar-custom .navbar-nav > li > a
+{
+    color:#acc5dc;
+    padding-left:20px;
+    padding-right:20px;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus
+{
+    color: #ffffff;
+    background-color:#ec7023;
+}
+
+.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus
+{
+    text-decoration: none;
+    color: #fff;
+    background-color: #c27b5f;
+}
+
+.navbar-custom .navbar-brand
+{
+    background-color: #f7f4f4;
+    color: #000;
+}
+.navbar-custom .navbar-toggle
+{
+    background-color:#fff;
+}
+
+.navbar-custom .navbar-nav > .open > a,
+.navbar-custom .navbar-nav > .open > a:hover,
+.navbar-custom .navbar-nav > .open > a:focus {
+    color: #eee;
+    background-color: #86a4c2;
+}
+
+.navbar-custom .icon-bar
+{
+    background-color:#ec7023;
+}
+
+/*
+   -----------------------------------------------------------------------------
+*  Personalização de áreas para apresentação em telas de visualização
+   -----------------------------------------------------------------------------
+*/
+
+.div-alternativas
+{
+    margin: 10px 10px;
+    padding: 10px;
+    border: #ddd solid;
+    border-radius: 20px 20px;
+    margin: 20px;
+}
+
+.questao{
+    padding: 10px 10px;
+}
+
+/*
+    ----------------------------------------------------------------------------
+    Estilos para gráficos
+    ----------------------------------------------------------------------------
+*/
+.grafico-pie{
+    background-color: #fff;;
+    padding: 5px  5px;
+    border: #05a3c0 solid;
+    border-radius: 20px 20px;
+    line-height: 0.8em;
+    margin: 4px 4px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+/*
+    ----------------------------------------------------------------------------
+    Estilo para gráfico de Etapas
+    ----------------------------------------------------------------------------
+*/
+.bs-wizard {margin-top: 40px;}
+
+/*Form Wizard*/
+.bs-wizard {
+    border-bottom: solid 1px #e0e0e0;
+    padding: 0 0 10px 0;
+}
+
+.bs-wizard > .bs-wizard-step {
+    padding: 0;
+    position: relative;
+}
+
+.bs-wizard > .bs-wizard-step + .bs-wizard-step {
+
+}
+
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {
+    color: #4e4741;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.bs-wizard > .bs-wizard-step .bs-wizard-info {
+    color: #4e4741;
+    font-size: 14px;
+}
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: #fbe8aa;
+    top: 45px; left: 50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    border-radius: 50%;
+}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {
+    content: ' ';
+    width: 14px;
+    height: 14px;
+    background: #fbbd19;
+    border-radius: 50px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
+
+.bs-wizard > .bs-wizard-step > .progress {
+    position: relative;
+    border-radius: 0px;
+    height: 8px;
+    box-shadow: none;
+    margin: 20px 0;
+}
+
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {
+    width:0px;
+    box-shadow: none;
+    background: #fbe8aa;
+}
+
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {
+    width:100%;
+}
+
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {
+    width:50%;
+}
+
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {
+    width:0%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {
+    width: 100%;
+}
+
+.bs-wizard > .bs-wizard-step.active > .bs-wizard-dot {
+    background-color: #fbbd19;
+}
+
+.bs-wizard > .bs-wizard-step.active > .bs-wizard-dot:after {
+    background-color: #fbe8aa;
+}
+
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {
+    background-color: #ded7d1;
+}
+
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {
+    opacity: 0;
+}
+
+.bs-wizard > .bs-wizard-step:first-child  > .progress {
+    left: 50%;
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step:last-child  > .progress {
+    width: 50%;
+}
+
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{
+    // pointer-events: none;
+}
+
+.progress{
+    background-color:#ded7d1;
+}
+.progress-bar{
+ //   color: #394249;
+}
+
+/*
+    ----------------------------------------------------------------------------
+    Legendas para gráficos
+    ----------------------------------------------------------------------------
+*/
+
+.leg-success{
+    border-radius: 50% 50%;
+    background-color: #5cb85c;
+    height: 20px;
+    width: 20px;
+}
+
+.leg-info{
+    border-radius: 50% 50%;
+    background-color: #5bc0de;
+    height: 20px;
+    width: 20px;
+}
+
+.leg-danger{
+    border-radius: 50% 50%;
+    background-color: #d9534f;
+    height: 20px;
+    width: 20px;
+}
+
+.btn-teste{
+    background-color: #878787 !important;
+    border: none !important;
+}
+
+.btn-teste:hover{
+    background-color: #aaaaaa !important;
+    border: none !important;
+}
+
+/*
+--------------------------------------------------------------------------------
+*  Persnalização do bootstrap
+--------------------------------------------------------------------------------
+*/
+hr{
+    border-color: #ddd !important;
+}
+
+.btn-primary{
+    background-color: #878787 !important;
+    border: none !important;
+}
+
+.btn-primary:hover{
+    background-color: #aaaaaa !important;
+    border: none !important;
+}
+
+.btn-info{
+    background-color: #fff !important;
+    border-color: #7ab0cf !important;
+    color: #7ab0cf !important;
+}
+
+.btn-info:hover{
+    background-color: #7ab0cf !important;
+    color: #fff !important;
+}
+
+.btn-visualizar{
+    background-color: #fff !important;
+    border-color: #e5ae51 !important;
+    color: #e5ae51 !important;
+}
+
+.btn-visualizar:hover{
+    background-color: #e5ae51 !important;
+    border-color:  #fff!important;
+    color: #fff !important;
+}
+
+.breadcrumb {
+    background-color: inherit;
+    border-radius: 25px;
+    display: block;
+}
+
+.breadcrumb li {
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: #c27b5f;
+}
+
+.breadcrumb a:hover {
+    color:#ec7023;
+    text-decoration: none;
+}
+.breadcrumb>.active {
+    color: #4e4741;
+}
+.breadcrumb>li+li:before {
+    color: #4e4741;
+    content: "\232A\00a0";
+}
+
+.modal .modal-body {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.form-control::-moz-placeholder {
+  color: #ddd !important;
+}
+.form-control:-ms-input-placeholder {
+  color: #ddd !important;
+}
+.form-control::-webkit-input-placeholder {
+  color: #ddd !important;
+}
+
+.modal-body {
+    min-height: 500px;
+}
+
+.table thead tr{
+    background-color: #5c758c;
+    border: none;
+    color: #fff;
+}
+
+table{
+    table-layout: fixed;
+}
+td{
+   max-width: 30px;
+   table-layout: fixed;
+    word-wrap: break-word;
+}
+
+@media only screen and (min-width: 768px) {
+    .navbar-header {
+        float: none; }
+    .navbar-toggle {
+        display: block; }
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-static-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse {
+        padding-right: 15px;
+        padding-left: 15px; }
+    .navbar-collapse.collapse {
+        display: none !important; }
+        .navbar-collapse.collapse.in {
+        display: block!important;
+        margin-top: 0px; }
+}
+@media (min-width: 1200px) {
+    .navbar-header {
+        float: left; }
+    .navbar-toggle {
+    display: none; }
+    .navbar-fixed-top .navbar-collapse,
+    .navbar-static-top .navbar-collapse,
+    .navbar-fixed-bottom .navbar-collapse {
+        display: block !important; }
+}
+
+/*
+   -----------------------------------------------------------------------------
+    Icheck
+   -----------------------------------------------------------------------------
+*/
+
+#icheckForm .radio label, #icheckForm .checkbox label {
+    padding-left: 0;
+}
+
+/* ----------------------------------------------------------------------------- 
+   Formatações Genéricas
+------------------------------------------------------------------------------*/
+
+.orientacao-direita{
+   text-align: right;
+}
+
+.centraliza{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo{
+    text-align: center;
+
+}
+
+.oculto{
+    visibility: hidden;
+    display: none;
+}
+
+// Tornar textarea animado
+.text-animated{
+    -webkit-transition: height 0.2s;
+    -moz-transition: height 0.2s;
+    transition: height 0.2s;
+}
+
+.conteudo{
+    margin-bottom: 60px;
+}
+
+//Barra de opções a direita
+.barra-direita {
+    width: 10%;
+    height: 80%;
+    // background-color: #004071;
+    margin: 7% 0%;
+    float: left;
+}
+
+/*
+    ----------------------------------------------------------------------------
+    Personalizações para ajuda
+    ----------------------------------------------------------------------------
+*/
+
+.obs{
+    border-radius: 20px 20px;
+    border: #d9534f solid;
+    padding: 1em;
+}
+
+.content-helper img{
+    max-width: 95%;
+}
+
+.menu-helper{
+    background-color: #007b73;
+    margin: 2em 2em;
+    padding: 2em 2em;
+    border-radius: 20px 20px;
+}
+
+ul.menu-helper, .menu-helper ul{
+    list-style-type: none;
+    padding: 5%;
+    margin-left: 8%;
+}
+
+.menu-helper a{
+    color: #fff;
+    text-decoration: none;
+}
+
+ul.menu-helper li:hover, ul.menu-helper a:hover{
+    color: #fff;
+    background-color: #30aba3;
+}
+
+.content-helper{
+    color: #2d3636;
+    padding: 2em 2em;
+}
+
+.content-helper h1, .content-helper h1 h2, .content-helper h3{
+    color: #05a3c0;
+}
+
+.content-helper p{
+ //   text-indent: 2em;
+}
+
+/*------------------------------------------------------------------------------
+--------------------------------- Impressão ------------------------------------
+------------------------------------------------------------------------------*/
+
+.imprimir{
+    float: right;
+}
+
+
+@media print {
+    input:radio + label {
+        display: inline;
+    }
+    
+    .iradio
+    {
+        border-radius: 50% 50%;
+        border: #aaa solid 1px;
+        min-height: 2px;
+        background-color: #aaa;
+        display: inline;
+    }
+    
+    
+    
+    .checked
+    {
+        background-color: #2e8965;
+    }
+
+    body{
+        font-family: Georgia, serif;
+    }
+    
+    a{
+        text-decoration: none;
+        border-bottom: thin solid #ccc;
+    }
+    
+    .panel{
+        border: none;
+    }
+    
+    textarea{
+        border: none;
+    }
+    
+    .btn{
+        display: none;
+    }
+    
+    .breadcrumb{
+        display: none;
+    }
+}
+

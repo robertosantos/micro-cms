@@ -1,0 +1,20 @@
+{% extends "base.twig" %}
+{% block title %}
+    {{ title is defined ? title }}
+{% endblock %}
+
+
+{% block content %}
+    {% if title is defined %}
+        {% if alert is defined %}
+            {{ alert|raw }}
+        {% endif %}
+    {% endif %}
+    <div class="row-fluid clearfix">
+        {% if content is defined %}
+            {{content|raw}}
+        {% endif %}
+    </div>
+
+{% endblock %}
+

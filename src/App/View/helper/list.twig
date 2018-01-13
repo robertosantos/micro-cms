@@ -1,0 +1,41 @@
+{% extends "base.twig" %}
+
+{% block title %}
+    {{ title is defined ? title }}
+{% endblock %}
+
+{% block content %}
+    {% if alert is defined %}
+        {{alert|raw}}
+    {% endif %}
+
+    <div class="row-fluid clearfix">
+        {% if title is defined %}
+            <div class="col-md-10 col-xl-12 column">
+                <h3 class="titulo-pagina">{{title|e}}</h3>
+            </div>
+        {% endif %}
+        <div class="col-md-2 column">
+            {% if link is defined %}
+                {% if link is not empty %}
+                    <a class="pull-right linkcriacao" href="/{{link}}/create">
+                        <h3><i class=" glyphicon glyphicon-plus"></i>New</h3>
+                    </a>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="row-fluid">
+        {% if content is defined and content != null %}
+            {{ content|raw }}
+        {% else %}    
+            <div class="msgconteudoagemvazia">
+                <h2>Ops!!! Empty  :(</h2>
+                {% if mensagem != null %}
+                    <h4>{{mensagem}}</h4>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+	
+{% endblock %}

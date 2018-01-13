@@ -1,0 +1,21 @@
+
+<!--Barra de Menus Superior-->
+<nav id="nav" style="text-align: center;">
+    <ul>
+        <li><a class="icon fa-home" href="/home/"><span>Home</span></a></li>
+        <li>
+            <a href="" class="icon fa-navicon"><span>Posts</span></a>
+            <ul>
+                <li><a class="icon fa-indent" href="/post/">Manage posts</a></li>
+            </ul>
+        </li>
+        <li><a class="icon fa-bar-chart" href="/user/"><span>Manage users</span></a></li>
+        <li>
+            <a href="" class="icon fa-user"><span>{{ user is defined ? user : "User" }}</span></a>
+            <ul>
+                <li><a class="icon fa-sign-out" href="/login/signout">Logout</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<br/><br/><br/>

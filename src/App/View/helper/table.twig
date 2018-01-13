@@ -1,0 +1,58 @@
+<table class="table {{ style is defined ? style : '' }} ">
+    {% if headers is defined %}
+        <thead>
+            <tr>
+                <th bgcolor="#878787">{{ headers[0] is defined ? headers[0] }}</th>
+                {% for header in headers[1:] %}
+                    <th class="hidden-xs" bgcolor="#878787">{{ header|raw }}</th>
+                {% endfor %}
+                {% if editar == true %}
+                    <th bgcolor="#878787"></th>
+                {% endif %}
+                {% if visualizar == true %}
+                    <th bgcolor="#878787"></th>
+                {% endif %}
+                {% if deletar == true %}
+                    <th bgcolor="#878787"></th>
+                {% endif %}
+            </tr>
+        </thead>
+    {% endif %}
+    {% if contents is defined %}
+        <tbody>
+            {% for content in contents %}
+                <tr>
+                    <td>{{ content[1] is defined ? content[1]|e }}</td>
+                    {% for item in content[2:] %}
+                        <td class="hidden-xs">{{ item|e }}</td>
+                    {% endfor %}
+                    {% if editar == true %}
+                    <td class="orientacao-direita col-md-1">
+                        <a href="/{{ link }}/edit/{{ content[0] }}" >
+                            <button class="btn btn-primary">
+                                <i class="glyphicon glyphicon-pencil"></i><span class="hidden-xs"> Edit</span>
+                            </button>
+                        </a> 
+                    </td>
+                    {% endif %}
+                    {% if visualizar == true %}
+                    <td class="orientacao-direita col-md-1">
+                        <a href="/{{ link }}/view/{{ content[0] }}" >
+                            <button class="btn btn-visualizar">
+                                <i class="glyphicon glyphicon-list-alt"></i><span class="hidden-xs"> View</span>
+                            </button>
+                        </a>
+                    </td>
+                    {% endif %}
+                    {% if deletar == true %}
+                    <td class="float: bottom;">
+                        <a href="/{{ link }}/delete/{{ content[0] }}" class="btn btn-danger btn-delete">
+                            <i class="glyphicon glyphicon-trash"></i><span class="hidden-xs"> Delete</span>
+                        </a>
+                    </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    {% endif %}
+</table>

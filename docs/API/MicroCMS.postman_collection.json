@@ -1,0 +1,174 @@
+{
+	"id": "442380be-3899-63ce-7a13-15ea9c68bdf1",
+	"name": "MicroCMS",
+	"description": "",
+	"order": [
+		"0f46d364-a71c-aace-4cfb-9da1066fb2f4",
+		"bdcf9d35-6787-51d0-b8af-b748d110e0bb",
+		"5a7a0e61-8aad-0329-916b-964e110b350a",
+		"d50bac41-58fb-489e-7bb5-cc85b6e066b9",
+		"c2aa6e4d-1712-65b4-bbad-fc3518a1ac49"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1508710582930,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "0f46d364-a71c-aace-4cfb-9da1066fb2f4",
+			"headers": "Authorization: Basic ZFhObGNpMXRhV055YnkxamJYTXRNakF4Tnc9PTpjR0Z6YzNkdmNtUXRiV2xqY204dFkyMXpMVEl3TVRjPT0=\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic ZFhObGNpMXRhV055YnkxamJYTXRNakF4Tnc9PTpjR0Z6YzNkdmNtUXRiV2xqY204dFkyMXpMVEl3TVRjPT0=",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/posts",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508712214008,
+			"name": "Lista de posts",
+			"description": "",
+			"collectionId": "442380be-3899-63ce-7a13-15ea9c68bdf1",
+			"responses": []
+		},
+		{
+			"id": "5a7a0e61-8aad-0329-916b-964e110b350a",
+			"headers": "Authorization: Basic ZFhObGNpMXRhV055YnkxamJYTXRNakF4Tnc9PTpjR0Z6YzNkdmNtUXRiV2xqY204dFkyMXpMVEl3TVRjPT0=\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic ZFhObGNpMXRhV055YnkxamJYTXRNakF4Tnc9PTpjR0Z6YzNkdmNtUXRiV2xqY204dFkyMXpMVEl3TVRjPT0=",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/posts/15",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508712343125,
+			"name": "Deleta  Post",
+			"description": "",
+			"collectionId": "442380be-3899-63ce-7a13-15ea9c68bdf1",
+			"responses": []
+		},
+		{
+			"id": "bdcf9d35-6787-51d0-b8af-b748d110e0bb",
+			"headers": "Authorization: Basic ZFhObGNpMXRhV055YnkxamJYTXRNakF4Tnc9PTpjR0Z6YzNkdmNtUXRiV2xqY204dFkyMXpMVEl3TVRjPT0=\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic ZFhObGNpMXRhV055YnkxamJYTXRNakF4Tnc9PTpjR0Z6YzNkdmNtUXRiV2xqY204dFkyMXpMVEl3TVRjPT0=",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/posts/16",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508712340995,
+			"name": "Recupera post por ID",
+			"description": "",
+			"collectionId": "442380be-3899-63ce-7a13-15ea9c68bdf1",
+			"responses": []
+		},
+		{
+			"id": "c2aa6e4d-1712-65b4-bbad-fc3518a1ac49",
+			"headers": "Content-Type: application/json\nAuthorization: Basic ZFhObGNpMXRhV055YnkxamJYTXRNakF4Tnc9PTpjR0Z6YzNkdmNtUXRiV2xqY204dFkyMXpMVEl3TVRjPT0=\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Basic ZFhObGNpMXRhV055YnkxamJYTXRNakF4Tnc9PTpjR0Z6YzNkdmNtUXRiV2xqY204dFkyMXpMVEl3TVRjPT0=",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/posts",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508712677620,
+			"name": "Cria post",
+			"description": "",
+			"collectionId": "442380be-3899-63ce-7a13-15ea9c68bdf1",
+			"responses": [],
+			"rawModeData": "{\n\t\"title\": \"Atualizando\",\n\t\"path\": \"nova-path-atualizadaaa\",\n\t\"body\": \"atualziado\",\n\t\"user\": 1\n}"
+		},
+		{
+			"id": "d50bac41-58fb-489e-7bb5-cc85b6e066b9",
+			"headers": "Content-Type: application/json\nAuthorization: Basic ZFhObGNpMXRhV055YnkxamJYTXRNakF4Tnc9PTpjR0Z6YzNkdmNtUXRiV2xqY204dFkyMXpMVEl3TVRjPT0=\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Basic ZFhObGNpMXRhV055YnkxamJYTXRNakF4Tnc9PTpjR0Z6YzNkdmNtUXRiV2xqY204dFkyMXpMVEl3TVRjPT0=",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/api/posts/14",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1508712344086,
+			"name": "Atualiza post",
+			"description": "",
+			"collectionId": "442380be-3899-63ce-7a13-15ea9c68bdf1",
+			"responses": [],
+			"rawModeData": "{\n\t\"title\": \"Atualizando\",\n\t\"path\": \"nova-path-atualizada\",\n\t\"body\": \"atualziado\"\n}"
+		}
+	]
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link type="text/css" href='/assets/font-awesome-4.1.0/css/font-awesome.css' rel="stylesheet"/>
+        <title>Algo deu Errado</title>
+        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            html{
+                height: 100%;
+            }
+
+            body{
+                min-height: 100%;
+                background-color: #5c758c;
+                background-image: url("/assets/img/fundo_ind.png");
+                background-repeat: repeat-x;
+                background-position: left bottom;
+            }
+
+            h1{
+                color: #fff;
+            }
+            .mensagem{
+                background-color: #e3e1d7;
+                border: none;
+                border-radius: 20px 20px;
+                color: #000;
+                margin: 20px 20px;
+                padding: 20px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Ops, algo deu Errado :(</h1>
+                    <button type = "button" class="btn btn-default" onclick="history.go(-1);"><i class="fa fa-chevron-left"></i> Voltar</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                <div class="mensagem">
+                    <h3>{{ titulo is defined ? titulo }}</h3>
+                    {%if mensagem is defined %}
+                        {{mensagem|raw}}
+                    {% endif %}
+                    <a onclick="history.go(-1);" style="text-decoration: none; color: #c27b5f">Clique para retornar à página anterior.</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

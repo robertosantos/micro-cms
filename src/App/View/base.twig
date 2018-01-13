@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        {% block head %}
+            <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <meta name="description" content=""/>
+            <meta name="keywords" content=""/>
+            <meta name="author" content=""/>
+            <link type="text/css"href="/assets/css/bootstrap.min.css" rel="stylesheet">
+            <link type="text/css" href='/assets/font-awesome-4.1.0/css/font-awesome.css' rel="stylesheet"/>
+            <link type="text/css" rel="stylesheet" href="/assets/css/estilo.css"/>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+            <script language="JavaScript" src="/assets/js/script_geral.js"></script>
+
+            <script src="/assets/js/template/jquery.min.js"></script>
+            <script src="/assets/js/template/jquery.dropotron.min.js"></script>
+            <script src="/assets/js/template/skel.min.js"></script>
+            <link type="text/css" rel="stylesheet" href="/assets/css/template/skel.css" />
+            <link type="text/css" rel="stylesheet" href="/assets/css/template/style.css" />
+            <link type="text/css" rel="stylesheet" href="/assets/css/template/style-desktop.css" />
+            <script src="/assets/js/template/init.js"></script>
+            <title>{% block  title %}{% endblock %}</title>
+        {% endblock %}
+    </head>
+    {% block body %}
+        <body>
+            <!--Container-->
+            <div class="container">
+                
+                {% block barranavegacao %}
+                    {{ nav is defined ? nav|raw }}
+                    <br>
+                {% endblock %}
+                <div class="row-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% set mensagem = app.session.flashbag.get('mensagem') %}
+                            {% if mensagem|length == 1 %}
+                                {{mensagem.0|raw}}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="conteudo">
+                        {% block content %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div> 
+            <!--Container-->
+        <center><img src="/assets/img/login_logo.png"/></center>
+        </body>
+    {% endblock %}
+</html>

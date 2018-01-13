@@ -1,0 +1,23 @@
+<div class="form-group" id="divName">
+    <label for="" class="col-sm-2 control-label">Name: </label>
+    <div class="col-sm-10">
+        <input name="name" value="{{ name is defined ? name|e : '' }}" type="text" class="form-control" id="idInputName" required=required>
+    </div>
+</div>
+
+<div class="form-group" id="divPassword">
+    <label for="idInputPassword" class="col-sm-2 control-label">Password:</label>	
+    <div class="col-sm-10">
+        <input id="idInputPassword" required=required name="password" type="password" class="form-control"/>
+        <span class="msg-erro-form" id="msg-erro-password"></span>
+    </div>
+</div>
+
+
+<div class="form-group" id="div-confirmarPassword">
+    <label for="idInputConfirmarPassword" class="col-sm-2 control-label">Confirm Password:</label>
+    <div class="col-sm-10">
+        <input id="idInputConfirmarPassword" required=required name="passwordConfirm" type="password" class="form-control"/>
+        <span class="msg-erro-form" id="msg-erro-confirmarPassword"></span>
+    </div>
+</div>

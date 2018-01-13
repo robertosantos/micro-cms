@@ -1,0 +1,72 @@
+version: "3.1"
+services:
+
+  composer:
+    build: docker/composer
+    restart: on-failure
+    container_name: ${LABEL_COMPOSER}
+    working_dir: /application
+    volumes:
+      - .:/application
+    command: "bootstrap"
+
+  mysql:
+    build: docker/mysql
+    restart: always
+    container_name: ${LABEL_MYSQL}
+    hostname: ${LABEL_MYSQL}
+    working_dir: /database
+    volumes:
+      - ./docs/database/:/database
+      - ./docs/database/:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=${DATABASE_MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${DATABASE_MYSQL_DB_NAME}
+      - MYSQL_USER=${DATABASE_MYSQL_USER}
+      - MYSQL_PASSWORD=${DATABASE_MYSQL_PASSWORD}
+    ports:
+      - "${HOST_MYSQL_PORT}:${DATABASE_MYSQL_PORT}"
+    networks:
+      vpcbr:
+        ipv4_address: ${DATABASE_MYSQL_IP}
+
+  server:
+    build: docker/server
+    restart: always
+    container_name: ${LABEL_SERVER}
+    hostname: ${LABEL_SERVER}
+    working_dir: /application
+    volumes:
+      - .:/application
+      - ./docker/server/php-ini-overrides.ini:/etc/php/7.1/cli/conf.d/99-overrides.ini
+    depends_on:
+      - mysql
+      - memcached
+    links:
+      - mysql
+      - memcached
+    ports:
+      - "${HOST_SERVER_PHP_PORT}:${SERVER_PHP_PORT}"
+    networks:
+      vpcbr:
+        ipv4_address: ${SERVER_PHP_IP}
+
+  memcached:
+    build: docker/memcached
+    restart: always
+    container_name: ${LABEL_MEMCACHED}
+    hostname: ${LABEL_MEMCACHED}
+    working_dir: /
+    ports:
+      - "${HOST_MEMCACHED_PORT}:${MEMCACHED_PORT}"
+    command: memcached -m ${MEMCACHED_SET_MEMORY}
+    networks:
+      vpcbr:
+        ipv4_address: ${MEMCACHED_IP}
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: ${VCP_RANGE}

@@ -1,0 +1,21 @@
+O desafio é criar um CMS simples em PHP.
+
+As seguintes funcionalidades são esperadas na aplicação:
+Sistema de login
+Criação e edição de conteúdos (posts) com os campos:
+título
+corpo
+path (exemplo: /noticias/titulo-do-post
+Visualização do conteúdo
+Listagem de conteúdos
+As páginas criadas devem ser acessíveis pela rota no "path"
+
+todos os endpoints devem ser feitos usando endpoints JSON.
+
+Bônus adicionais
+
+Testes de unidade / comportamento
+Utilizar taskrunners
+Código padronizado
+Código comentado com explicações
+Criar Dockerfile correspondente ao projeto
